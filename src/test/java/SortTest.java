@@ -17,6 +17,12 @@ public class SortTest {
         test();
     }
 
+    @Test
+    public void bubbleSorterTest() {
+        sorter = new BubbleSorter();
+        test();
+    }
+
     public void test() {
         test(new int[]{0}, new int[]{0}); // length = 1
         test(new int[]{1, 2, 3, 4}, new int[]{1, 2, 3, 4}); // even, sorted
@@ -26,7 +32,7 @@ public class SortTest {
     }
 
     private void test(final int[] unsorted, final int[] expectedSorted) {
-        final String message = null;
+        final String message = "Unsorted: " + Arrays.toString(unsorted);
         final int[] actualSorted = sorter.sort(unsorted);
         Assert.assertEquals(message, Arrays.toString(expectedSorted), Arrays.toString(actualSorted));
     }

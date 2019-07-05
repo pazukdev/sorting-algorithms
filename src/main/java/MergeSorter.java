@@ -4,7 +4,7 @@
 public class MergeSorter implements Sorter {
 
     @Override
-    public int[] sort(int[] array) {
+    public int[] sort(final int[] array) {
         return mergeSort(array);
     }
 
@@ -12,7 +12,7 @@ public class MergeSorter implements Sorter {
      * time complexity: O(n log n)
      * space complexity: O(n)
      */
-    private int[] mergeSort(int[] array) {
+    private int[] mergeSort(final int[] array) {
 
         if (array.length <= 1) { // nothing to divide
             return array;

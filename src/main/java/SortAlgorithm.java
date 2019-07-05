@@ -17,7 +17,6 @@ public class SortAlgorithm {
         System.out.println(Arrays.toString(array));
 
         // Select sort algorithm:
-        bubbleSort(array);
         //bubbleSort1(array);
         //gnomeSort(array);
         //selectionSort(array);
@@ -37,27 +36,6 @@ public class SortAlgorithm {
             array[i]=random.nextInt(100);
         }
         return array;
-    }
-
-
-
-
-
-    static void bubbleSort(int[] array){
-        boolean isThereUnsortedElements=true;
-        while (isThereUnsortedElements){
-            isThereUnsortedElements=false;
-            for(int i=1; i<array.length; i++){
-                if(array[i-1]<array[i]){
-                    int temp=array[i];
-                    array[i]=array[i-1];
-                    array[i-1]=temp;
-                    isThereUnsortedElements=true;
-                }
-            }
-        }
-        System.out.println("Primitive Bubble sort without border of sorted part:");
-        System.out.println(Arrays.toString(array));
     }
 
     static void bubbleSort1(int[] array){
