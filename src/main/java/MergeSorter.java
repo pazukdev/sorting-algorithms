@@ -8,6 +8,10 @@ public class MergeSorter implements Sorter {
         return mergeSort(array);
     }
 
+    /**
+     * time complexity: O(n log n)
+     * space complexity: O(n)
+     */
     private int[] mergeSort(int[] array) {
 
         if (array.length <= 1) { // nothing to divide
